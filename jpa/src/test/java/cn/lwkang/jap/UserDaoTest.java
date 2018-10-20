@@ -62,6 +62,11 @@ public class UserDaoTest {
         for(User user : users){
             System.out.println(user.toString());
         }
+    }
 
+    @Test
+    public void modifyUserNameById(){
+        int row = userDao.modifyNameById("kk",2L);
+        System.out.println(row);
     }
 }

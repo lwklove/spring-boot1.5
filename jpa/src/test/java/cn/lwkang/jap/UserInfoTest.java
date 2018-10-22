@@ -1,5 +1,6 @@
 package cn.lwkang.jap;
 
+import cn.lwkang.jap.dao.UserDetailDao;
 import cn.lwkang.jap.dao.UserInfoDao;
 import cn.lwkang.jap.domain.UserDetail;
 import cn.lwkang.jap.domain.UserInfo;
@@ -9,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -19,7 +21,10 @@ public class UserInfoTest {
 
     @Test
     public void saveUserInfo(){
-        userInfoDao.save(new UserDetail("2","anhui","codeing"));
+        List<UserInfo> userInfos = userInfoDao.findUserInfo("codeing");
+        for (UserInfo userInfo:userInfos){
+            System.out.println("addree "+userInfo.getAddress());
+        }
     }
 
     @Test

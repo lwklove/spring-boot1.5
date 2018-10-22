@@ -11,5 +11,5 @@ public interface UserInfoDao extends JpaRepository<UserDetail,Long> {
 
     @Query("select u.userName as userName, u.email as email, d.address as address , d.hobby as hobby from User u , UserDetail d " +
             "where u.id=d.userId  and  d.hobby = ?1 ")
-    List<UserDetail> findUserInfo(String hobby);
+    List<UserInfo> findUserInfo(String hobby);
 }

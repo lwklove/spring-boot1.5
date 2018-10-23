@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <!--if 满足条件显示-->
+    <a th:if="${flag == 'yes'}" th:href="@{home}">home</a>
+    <!--unless 不满足条件显示-->
+    <a th:unless="${flag == 'no'}" th:href="@{http://www.lwkang.top}">lwkang</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <style type="text/css">
+        .image {
+            height: 100px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image" th:style="'background:url('+ @{${img}} +');'"></div>
+</body>
+</html>

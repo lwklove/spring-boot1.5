@@ -5,9 +5,12 @@
     <title>Layout</title>
 </head>
 <body>
-    <div th:replace="layout/header :: header"></div>
-    <div th:replace="layout/left :: left"></div>
-    <div layout:fragment="content" >layout</div>
-    <div th:replace="layout/footer :: footer"></div>
+    <div >
+        <!--fragment Name-->
+        <div th:replace="layout/header :: header">Header</div>
+        <div th:replace="layout/left :: left">Left</div>
+        <div layout:fragment="content" >content</div>
+        <div th:replace="layout/footer :: footer">Footer</div>
+    </div>
 </body>
 </html>

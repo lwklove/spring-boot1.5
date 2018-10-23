@@ -2,10 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Header</title>
+    <title>Title</title>
 </head>
 <body>
-    <!--fragment Name-->
-    <h3 th:fragment="header">头部</h3>
+    <p th:if="${age lt 10 ? '小孩':'大叔'}">小孩</p>
 </body>
 </html>

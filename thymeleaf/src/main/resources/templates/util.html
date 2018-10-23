@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <!--格式化日期-->
+    <p th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}"></p>
+    <p th:text="${#dates.createToday()}"></p>
+    <p th:text="${#dates.createNow()}"></p>
+
+    <!--判断字符串是否为空-->
+    <p th:text="${#strings.isEmpty(userName)}"></p>
+    <!--判断list是否为空-->
+    <p th:text="${#strings.listIsEmpty(users)}"></p>
+    <!--获得strings长度-->
+    <p th:text="${#strings.length(userName)}"></p>
+    <!--拼接字符串（多个参数）-->
+    <p th:text="${#strings.concat(userName,userName)}"></p>
+    <!--随机产生指定长度的字符串-->
+    <p th:text="${#strings.randomAlphanumeric(#strings.length(userName))}"></p>
+</body>
+</html>
